@@ -3,6 +3,7 @@ package com.global.mm;
 import com.global.mm.xml.DateAdapter;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.Date;
@@ -15,9 +16,13 @@ public class Item {
     private String author;
     private String title;
     private String description;
+
+    @NotNull
     private Date pubDate;
+
     @Valid
     private Enclosure enclosure;
+
     private String subtitle;
     private String iAuthor;
     private Image image;

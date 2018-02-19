@@ -1,9 +1,12 @@
 package com.global.mm;
 
+import org.hibernate.validator.constraints.URL;
+
 import javax.xml.bind.annotation.XmlAttribute;
 
 public class AtomLink {
 
+    @URL
     private String href;
     public AtomLink(String feedHref) {
         this.href = feedHref;

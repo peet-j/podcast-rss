@@ -1,5 +1,7 @@
 package com.global.mm;
 
+import org.hibernate.validator.constraints.URL;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -10,8 +12,8 @@ import java.util.List;
 
 public class Channel {
 
+    @URL
     private String feedHref;
-
     @NotNull
     private String title;
     @NotNull
@@ -26,8 +28,10 @@ public class Channel {
     private String subtitle;
     private String author;
     private String summary;
+
     private Image image;
     private Owner owner;
+
     private Boolean explicit;
 
     @Pattern(regexp = "episodic|serial", flags = Pattern.Flag.CASE_INSENSITIVE)
